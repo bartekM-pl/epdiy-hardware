@@ -35,8 +35,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 5.0,
-          "width": 5.0
+          "height": 1.7018,
+          "width": 1.524
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -56,7 +56,14 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "footprint_type_mismatch|29102000|32524000|cc2ae667-0b96-4743-9928-154d87b74298|00000000-0000-0000-0000-000000000000",
+        "footprint_type_mismatch|65024000|46228000|00000000-0000-0000-0000-00006062cac5|00000000-0000-0000-0000-000000000000",
+        "silk_edge_clearance|105725000|57612107|c03b4c2e-72e0-4b41-914a-318999fea37f|1e2b3366-21db-4d32-a566-84893ac01064",
+        "silk_edge_clearance|87725000|57600000|3ba1e455-0e58-44eb-890a-1013e829d633|afeae609-73aa-4590-a399-b4543586bfe1",
+        "solder_mask_bridge|116750000|21600000|a22d52c6-5907-460d-8695-1e96b66242ae|2ae9f35b-c04a-49d6-8e4e-fb6c21dbd0aa",
+        "solder_mask_bridge|96250000|21600000|09a5be26-8cf5-40cc-bae8-f01a87157ae1|7a4cd135-f576-4cd0-a639-04bf32f35387"
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -104,7 +111,7 @@
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
         "track_dangling": "warning",
-        "track_width": "error",
+        "track_width": "warning",
         "tracks_crossing": "error",
         "unconnected_items": "error",
         "unresolved_variable": "error",
@@ -132,7 +139,7 @@
         "min_track_width": 0.19999999999999998,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.39999999999999997,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -142,42 +149,43 @@
           "td_on_pad_in_zone": false,
           "td_onpadsmd": true,
           "td_onroundshapesonly": false,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onviapad": true
         }
       ],
       "teardrop_parameters": [
         {
-          "td_curve_segcount": 0,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_curve_segcount": 5,
+          "td_height_ratio": 0.7,
+          "td_length_ratio": 0.3,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_round_shape",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.7
         },
         {
-          "td_curve_segcount": 0,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_curve_segcount": 5,
+          "td_height_ratio": 0.7,
+          "td_length_ratio": 0.3,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_rect_shape",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.7
         },
         {
-          "td_curve_segcount": 0,
-          "td_height_ratio": 1.0,
-          "td_length_ratio": 0.5,
+          "td_curve_segcount": 5,
+          "td_height_ratio": 0.7,
+          "td_length_ratio": 0.3,
           "td_maxheight": 2.0,
           "td_maxlen": 1.0,
           "td_target_name": "td_track_end",
-          "td_width_to_size_filter_ratio": 0.9
+          "td_width_to_size_filter_ratio": 0.7
         }
       ],
       "track_widths": [
         0.0,
         0.2,
+        0.25,
         0.3,
         0.5,
         0.75,
@@ -187,6 +195,14 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.7,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false,
